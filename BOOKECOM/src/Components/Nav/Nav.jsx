@@ -1,6 +1,5 @@
-import React from 'react'
+import React, { useState } from 'react'
 import './Nav.css'
-import '../../App.css'
 import { Link, NavLink } from 'react-router-dom'
 
 import Logo from '../../assets/logo.png'
@@ -11,42 +10,53 @@ import { VscMenu } from 'react-icons/vsc';
 import { GrClose } from 'react-icons/gr'
 
 const Nav = () => {
+    // use state for navbar 
+    const [isNavLinkShowing, setIsNavLinkShowing] = useState(false)
+
+
+
+
+
     return (
         <nav>
             <div className="container nav-container">
-                <Link to="/" className="logo"><img src={Logo} alt="logo" /></Link>
-            </div>
-            <ul className="nav-links">
-                {
-                    navLinks.map(({ name, path }, index) => {
-                        return (
-                            <li key={index}>
-                                <NavLink to={path}>{name}</NavLink>
-                            </li>
-                        )
-                    })
-                }
-            </ul>
+                <Link to="/" className="logo">
+                    <img src={Logo} alt="logo" />
 
-            <div className="nav-right">
-                {
-                    navRight.managements.map((item, index) => {
-                        return (
+                </Link>
 
-                            <Link key={index} target='_blank'
-                                className='management-icons' to={item.link} >
-                                <item.icon />
-                            </Link>
+                <ul className={`nav-links ${isNavLinkShowing ? 'navLinksShow' : 'navLinksHide'}`}>
+                    {
+                        navLinks.map(({ name, path }, index) => {
+                            return (
+                                <li key={index}>
+                                    <NavLink to={path} className={({ isActive }) => isActive ? 'active' : ''}>{name}</NavLink>
+                                </li>
+                            )
+                        })
+                    }
+                </ul>
 
-                        )
-                    })
-                }
-                <div className="menu-bar">
-                    <button className="menu-button btn btn-border">
-                        <VscMenu />
-                        <GrClose />
+                <div className="nav-right">
+                    {
+                        navRight.managements.map((item, index) => {
+                            return (
+
+                                <Link key={index}
+                                    className='management-icons' to={item.link} >
+                                    <item.icon />
+                                </Link>
+
+                            )
+                        })
+                    }
+
+                    <button className="menu-button" onClick={() => setIsNavLinkShowing(!isNavLinkShowing)}>
+                        {!isNavLinkShowing ? <VscMenu /> : <GrClose />}
                     </button>
+
                 </div>
+
             </div>
         </nav>
     )
