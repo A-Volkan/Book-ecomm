@@ -11,7 +11,18 @@ import { GrClose } from 'react-icons/gr'
 
 const Nav = () => {
     // use state for navbar 
-    const [isNavLinkShowing, setIsNavLinkShowing] = useState(false)
+    const [isNavLinkShowing, setIsNavLinkShowing] = useState(false);
+
+
+    if (innerWidth < 1024) {
+        window.addEventListener('scroll', () => {
+            document.querySelector('.nav-links').classList.add('navLinksHide');
+            setIsNavLinkShowing(false)
+        })
+    }
+    window.addEventListener('scroll', () => {
+        document.querySelector('nav').classList.remove('navShadow', window.scrollY > 0 ? 'navShadow' : '');
+    })
 
 
 
