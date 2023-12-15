@@ -11,7 +11,7 @@
   font-weight: 400;
 }
 :root {
-  --color-primary: #7a6930;
+  --color-primary: rgb(194,75,54);
   --color-black: #000;
   --color-black-Ex: #222222;
   --color-dark: #7A7A7A;
@@ -49,7 +49,7 @@ h5 {
 }
 h1 {
   font-size: 73px;
-  line-height: 145px;
+  /* line-height: 145px; */
   color: var(--color-black-Ex);
 }
 h2 {
