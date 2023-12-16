@@ -5,7 +5,7 @@
 
 .featurebook-box {
     margin-top: 56px;
-    direction: flex;
+    display: flex;
     flex-direction: column;
     gap: 24px;
     text-align: center;
