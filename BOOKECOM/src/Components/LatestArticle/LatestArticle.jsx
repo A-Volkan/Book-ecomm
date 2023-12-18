@@ -27,10 +27,10 @@ function LatestArticle() {
                                     </div>
                                     <div className="article-info">
                                         <h5>{date}</h5>
-                                        <link to={titLink}>
+                                        <Link to={titLink}>
                                             <h3>{title}</h3>
 
-                                        </link>
+                                        </Link>
                                     </div>
                                     <div className="latest-article-social">
                                         <p>{inspiration}</p>

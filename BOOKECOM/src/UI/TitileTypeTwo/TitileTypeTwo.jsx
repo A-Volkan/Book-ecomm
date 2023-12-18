@@ -1,7 +1,7 @@
 import React from 'react'
 import './TitileTypeTwo.css'
 
-import victor from '../../../assets/victor.png'
+import victor from '../../assets/victor.png'
 
 function TitileTypeTwo({ ClassName, Title }) {
     return (

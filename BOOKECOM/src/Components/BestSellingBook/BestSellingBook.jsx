@@ -1,7 +1,7 @@
 import React from 'react'
 import './BestSellingBook.css'
 
-import TitileTypeTwo from '../../UI/TitileTypeOne/TitileTypeTwo/TitileTypeTwo'
+import TitileTypeTwo from '../../UI/TitileTypeTwo/TitileTypeTwo'
 
 import TreeShape from '../../Assets/treeShape.png'
 
