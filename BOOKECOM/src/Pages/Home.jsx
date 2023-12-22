@@ -5,6 +5,7 @@ import FeaturesBooks from '../Components/FeaturesBooks/FeaturesBooks'
 import BestSellingBook from '../Components/BestSellingBook/BestSellingBook'
 import PopularBooks from '../Components/PopularBooks/PopularBooks'
 import LatestArticle from '../Components/LatestArticle/LatestArticle'
+import Quote from '../Components/Quote/Quote'
 
 const Home = () => {
     return (
@@ -14,7 +15,9 @@ const Home = () => {
             <FeaturesBooks />
             <BestSellingBook />
             <PopularBooks />
+            <Quote />
             <LatestArticle />
+
         </>
     )
 }
